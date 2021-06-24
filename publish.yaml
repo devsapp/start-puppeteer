@@ -2,7 +2,7 @@ Type: Application
 Name: start-application
 Provider:
   - 其它
-Version: 0.0.1
+Version: 0.0.2
 Description: 初始化模板
 HomePage: https://www.serverless-devs.com
 Tags: #标签详情
