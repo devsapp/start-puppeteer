@@ -1,0 +1,2 @@
+RUNTIME nodejs12
+RUN fun-install apt-get install libblas3  fonts-liberation libappindicator3-1 libasound2 libatk-bridge2.0-0 libgtk-3-0 libnspr4 libnss3 libpangocairo-1.0-0 libxcb-dri3-0 libx11-xcb1 libxcb1 libxss1 libxtst6 lsb-release xdg-utils libatspi2.0-0  libatk1.0-0  libxkbcommon0  libepoxy0  libglapi-mesa libnspr4 libgbm-dev

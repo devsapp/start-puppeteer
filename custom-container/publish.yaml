@@ -1,0 +1,10 @@
+Type: Application
+Name: start-puppeteer
+Provider:
+  - 阿里云
+Version: 0.0.1
+Description: Project Initialization
+HomePage: https://github.com/devsapp/start-puppeteer
+Tags: 
+  - puppeteer
+Category: 基础云服务

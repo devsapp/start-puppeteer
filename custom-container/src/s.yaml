@@ -1,0 +1,40 @@
+edition: 1.0.0
+name: transform_fun
+access: default
+vars:
+  region: cn-shenzhen
+services:
+  fc-puppeteer-customContainer-html2png:
+    component: devsapp/fc
+    props:
+      region: ${vars.region}
+      service:
+        name: puppeteer-customContainer
+        role:
+          name: puppeteer-customContainerDefaultRole
+          policies:
+            - AliyunContainerRegistryReadOnlyAccess
+        internetAccess: true
+      function:
+        name: html2png-customContainer
+        description: HTTP function powered by nodejs express
+        handler: not-used
+        timeout: 60
+        caPort: 8080
+        memorySize: 1536
+        runtime: custom-container
+        customContainerConfig:
+          image: registry.cn-shenzhen.aliyuncs.com/puppeteer_namespace/puppeteer_repo:latest
+          #command: '[ "node"]'
+          #args: '["server.js"]'
+        cAPort: 8080
+        codeUri: ./
+      triggers:
+        - name: http-trigger-test
+          type: http
+          config:
+            authType: anonymous
+            methods:
+              - GET
+              - POST
+              - PUT
