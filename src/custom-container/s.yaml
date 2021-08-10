@@ -28,7 +28,7 @@ services:
           #command: '[ "node"]'
           #args: '["server.js"]'
         cAPort: 8080
-        codeUri: ./src/
+        codeUri: ./
       triggers:
         - name: http-trigger-test
           type: http
