@@ -17,7 +17,7 @@ vim s.yaml
 # edit vpc config as your aliyun NAS shows
 ```
 
-![alt text](https://github.com/alapha23/start-puppeteer/blob/master/vpc.png?raw=true)
+![alt text](https://github.com/devsapp/start-puppeteer/blob/master/src/vpc.png?raw=true)
 
 #### local test
 
@@ -27,7 +27,7 @@ sudo s local start
 # then access the website from browser locally
 ```
 
-![alt text](https://github.com/alapha23/start-puppeteer/blob/master/demo.png?raw=true)
+![alt text](https://github.com/devsapp/start-puppeteer/blob/master/src/demo.png?raw=true)
 
 
 #### Deploy
