@@ -20,9 +20,9 @@
 
 ```
 cd nodejs12
-sudo s build --use-docker
-sudo s nas upload -r -n ./.s/build/artifacts/puppeteer-nodejs12/html2png/.s /mnt/auto/
-sudo s local start
+s build --use-docker
+s nas upload -r -n ./.s/build/artifacts/puppeteer-nodejs12/html2png/.s /mnt/auto/
+s local start
 # then access the url via your browser
 ```
 
@@ -30,8 +30,8 @@ In case of a successful local run, check the example image by `xdg-open .s/tmp/l
 
 Then deploy
 ```
-sudo s build --use-docker
-sudo s deploy
+s build --use-docker
+s deploy
 # access the url via your browser
 ```
 
@@ -46,8 +46,8 @@ sudo s deploy
 然后
 ```
 cd custom-container
-sudo s build --use-docker
-sudo s deploy
+s build --use-docker
+s deploy
 ```
 
 
