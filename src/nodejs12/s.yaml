@@ -23,7 +23,7 @@ services:
           LD_LIBRARY_PATH: >-
             /mnt/auto/root/usr/local/lib:/mnt/auto/root/usr/lib:/mnt/auto/root/usr/lib/x86_64-linux-gnu:/mnt/auto/root/usr/lib64:/mnt/auto/root/lib:/mnt/auto/root/lib/x86_64-linux-gnu:/mnt/auto/root/python/lib/python2.7/site-packages:/mnt/auto/root/python/lib/python3.6/site-packages
           NODE_PATH: /mnt/auto/node_modules:/usr/local/lib/node_modules
-        codeUri: ./
+        codeUri: ./src/
       triggers:
         - name: httpTrigger
           type: http

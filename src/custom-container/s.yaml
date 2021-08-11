@@ -24,11 +24,11 @@ services:
         memorySize: 1536
         runtime: custom-container
         customContainerConfig:
-          image: registry.cn-shenzhen.aliyuncs.com/${your_namespace}/${your_repo}:${version}
+          image: registry.cn-shenzhen.aliyuncs.com/puppeteer_namespace/puppeteer_repo:latest
           #command: '[ "node"]'
           #args: '["server.js"]'
         cAPort: 8080
-        codeUri: ./
+        codeUri: ./src/
       triggers:
         - name: http-trigger-test
           type: http
