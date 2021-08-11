@@ -24,7 +24,7 @@ services:
         memorySize: 1536
         runtime: custom-container
         customContainerConfig:
-          image: registry.cn-shenzhen.aliyuncs.com/puppeteer_namespace/puppeteer_repo:latest
+          image: registry.cn-shenzhen.aliyuncs.com/${your_namespace}/${your_repo}:${version}
           #command: '[ "node"]'
           #args: '["server.js"]'
         cAPort: 8080
