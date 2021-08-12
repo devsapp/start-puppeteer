@@ -11,11 +11,6 @@ services:
       service:
         name: puppeteer-nodejs12
         description: helloworld
-        vpcConfig:
-          vpcId: vpc-wz9xskhhq2uvc4jxu4wln
-          securityGroupId: sg-wz9dev0583p7dnmjwrly
-          vswitchIds:
-            - vsw-wz90blha07wb6u7atltyv
         internetAccess: true
         nasConfig: Auto
       function:
