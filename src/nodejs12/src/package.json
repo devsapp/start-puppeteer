@@ -13,18 +13,5 @@
   "directories": {
     "lib": "lib"
   },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alibaba/funcraft"
-  },
-  "keywords": [
-    "puppeteer",
-    "fun",
-    "fc"
-  ],
-  "bugs": {
-    "url": "https://github.com/alibaba/funcraft/issues"
-  },
-  "homepage": "https://github.com/alibaba/funcraft/blob/master/README.md"
+  "devDependencies": {}
 }
