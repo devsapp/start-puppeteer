@@ -19,6 +19,7 @@
 ```
 cd nodejs12
 s build --use-docker
+s nas init
 s nas upload -r -n ./.s/build/artifacts/puppeteer-nodejs12/html2png/.s/root /mnt/auto/root
 s nas upload -r -n ./.s/build/artifacts/puppeteer-nodejs12/html2png/node_modules  /mnt/auto/node_modules
 s local start
