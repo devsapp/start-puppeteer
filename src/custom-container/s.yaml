@@ -2,7 +2,7 @@ edition: 1.0.0
 name: container-puppeteer
 access: "{{ access }}"
 vars:
-  region: cn-shenzhen
+  region: cn-hangzhou
 services:
   fc-puppeteer-customContainer-html2png:
     component: devsapp/fc
@@ -10,10 +10,6 @@ services:
       region: ${vars.region}
       service:
         name: puppeteer-customContainer
-        role:
-          name: puppeteer-customContainerDefaultRole
-          policies:
-            - AliyunContainerRegistryReadOnlyAccess
         internetAccess: true
       function:
         name: html2png-customContainer
@@ -25,7 +21,6 @@ services:
         runtime: custom-container
         customContainerConfig:
           image: registry.cn-shenzhen.aliyuncs.com/${your_namespace}/${your_repo}:${version}
-        cAPort: 8080
         codeUri: ./src/
       triggers:
         - name: http-trigger-test

@@ -2,7 +2,7 @@ edition: 1.0.0
 name: nodejs-puppeteer
 access: "{{ access }}"
 vars:
-  region: cn-shenzhen
+  region: cn-hangzhou
 services:
   fc-puppeteer-nodejs12-html2png:
     component: devsapp/fc

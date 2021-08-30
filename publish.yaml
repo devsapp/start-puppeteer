@@ -2,7 +2,7 @@ Type: Application
 Name: start-puppeteer
 Provider:
   - 阿里云
-Version: 0.0.3
+Version: 0.0.4
 Description: Project Initialization
 HomePage: https://github.com/devsapp/start-puppeteer
 Tags: 
