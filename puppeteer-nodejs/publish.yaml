@@ -1,5 +1,5 @@
 Type: Application
-Name: puppeteer-container
+Name: puppeteer-nodejs
 Version: 1.0.1
 Provider:
   - 阿里云
