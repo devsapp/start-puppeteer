@@ -1,0 +1,37 @@
+edition: 1.0.0          #  命令行YAML规范版本，遵循语义化版本（Semantic Versioning）规范
+name: puppeteer-app         # 项目名称
+access: '{{access}}'    #  秘钥别名
+
+services:
+  puppeteer: #  服务名称
+    component: devsapp/fc
+    props: #  组件的属性值
+      region: cn-hangzhou
+      service:
+        name: puppeteer-test
+        nasConfig: Auto
+      function:
+        name: html2png
+        handler: index.handler
+        timeout: 120
+        memorySize: 1536
+        runtime: nodejs12
+        codeUri: ./src/
+        environmentVariables:
+          LD_LIBRARY_PATH: >-
+            /mnt/auto/root/usr/local/lib:/mnt/auto/root/usr/lib:/mnt/auto/root/usr/lib/x86_64-linux-gnu:/mnt/auto/root/usr/lib64:/mnt/auto/root/lib:/mnt/auto/root/lib/x86_64-linux-gnu:/mnt/auto/root/python/lib/python2.7/site-packages:/mnt/auto/root/python/lib/python3.6/site-packages
+          NODE_PATH: /mnt/auto/node_modules:/usr/local/lib/node_modules
+      triggers:
+        - name: httpTrigger
+          type: http
+          config:
+            authType: anonymous
+            methods:
+              - GET
+              - POST
+              - PUT
+      customDomains:
+        - domainName: auto
+          protocol: HTTP
+          routeConfigs:
+            - path: /*
