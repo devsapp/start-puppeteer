@@ -33,7 +33,7 @@ services:
         memorySize: 1536
         runtime: custom-container
         customContainerConfig:
-          image: registry.cn-shenzhen.aliyuncs.com/${your_namespace}/${your_repo}:${version}
+          image: registry.cn-hangzhou.aliyuncs.com/${your_namespace}/${your_repo}:${version}
         codeUri: ./src/
       triggers:
         - name: http-trigger-test
