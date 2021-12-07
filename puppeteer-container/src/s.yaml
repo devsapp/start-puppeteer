@@ -44,3 +44,8 @@ services:
               - GET
               - POST
               - PUT
+      customDomains:
+        - domainName: auto
+          protocol: HTTP
+          routeConfigs:
+            - path: /*
