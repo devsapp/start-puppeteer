@@ -1,3 +1,12 @@
+# ------------------------------------
+#   欢迎您使用阿里云函数计算 FC 组件进行项目开发
+#   组件仓库地址/帮助文档：https://github.com/devsapp/fc
+#   Yaml参考文档：https://github.com/devsapp/fc/blob/jiangyu-docs/docs/zh/yaml.md
+#   快速入门：
+#      快速创建应用：https://github.com/devsapp/fc/blob/jiangyu-docs/docs/zh/quick_start_application.md
+#      快速使用命令：https://github.com/devsapp/fc/blob/jiangyu-docs/docs/zh/quick_start_function.md
+# ------------------------------------
+
 edition: 1.0.0
 name: container-puppeteer
 access: "{{ access }}"
@@ -5,7 +14,10 @@ vars:
   region: cn-hangzhou
 services:
   fc-puppeteer-customContainer-html2png:
-    component: devsapp/fc
+    component: fc
+    pre-deploy:
+      - run: s build --use-docker --dockerfile ./src/Dockerfile
+        path: ./
     props:
       region: ${vars.region}
       service:

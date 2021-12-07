@@ -6,7 +6,6 @@
 - 进入项目：`cd puppeteer-container`
 - 在阿里云控制台启用 ACR（并且**创建镜像仓库(repo)，创建命名空间(namespace)**。）, NAS, 与 serverless 函数服务
 - 修改 s.yaml 中 customContainerConfig 一项，将原本的`image: registry.cn-shenzhen.aliyuncs.com/${your_namespace}/${your_repo}:${version}`中，`${your_namespace}`替换为您创建的命名空间，将`${your_repo}`替换为您创建的镜像仓库名称，将`${version}`替换为构建后容器镜像版本（通过 docker images 查询）。
-- 构建项目：`s build --use-docker --dockerfile ./src/Dockerfile`
 - 部署项目：`s deploy --use-local -y`
 
 

@@ -1,10 +1,27 @@
+# ------------------------------------
+#   欢迎您使用阿里云函数计算 FC 组件进行项目开发
+#   组件仓库地址/帮助文档：https://github.com/devsapp/fc
+#   Yaml参考文档：https://github.com/devsapp/fc/blob/jiangyu-docs/docs/zh/yaml.md
+#   快速入门：
+#      快速创建应用：https://github.com/devsapp/fc/blob/jiangyu-docs/docs/zh/quick_start_application.md
+#      快速使用命令：https://github.com/devsapp/fc/blob/jiangyu-docs/docs/zh/quick_start_function.md
+# ------------------------------------
+
 edition: 1.0.0          #  命令行YAML规范版本，遵循语义化版本（Semantic Versioning）规范
-name: puppeteer-app         # 项目名称
+name: puppeteer-app        # 项目名称
 access: '{{access}}'    #  秘钥别名
 
 services:
   puppeteer: #  服务名称
-    component: devsapp/fc
+    component: fc
+    pre-deploy:
+      - run: s build --use-docker
+        path: ./
+    post-deploy:
+      - run: s nas upload -r -n ./.s/build/artifacts/puppeteer-test/html2png/.s/root /mnt/auto/root
+        path: ./
+      - run: s nas upload -r -n ./.s/build/artifacts/puppeteer-test/html2png/node_modules  /mnt/auto/node_modules
+        path: ./
     props: #  组件的属性值
       region: cn-hangzhou
       service:
