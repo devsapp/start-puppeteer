@@ -14,14 +14,15 @@ access: '{{access}}'    #  秘钥别名
 services:
   puppeteer: #  服务名称
     component: fc
-    pre-deploy:
-      - run: s build --use-docker
-        path: ./
-    post-deploy:
-      - run: s nas upload -r -n ./.s/build/artifacts/puppeteer-test/html2png/.s/root /mnt/auto/root
-        path: ./
-      - run: s nas upload -r -n ./.s/build/artifacts/puppeteer-test/html2png/node_modules  /mnt/auto/node_modules
-        path: ./
+    actions:
+      pre-deploy:
+        - run: s build --use-docker
+          path: ./
+      post-deploy:
+        - run: s nas upload -r -n ./.s/build/artifacts/puppeteer-test/html2png/.s/root /mnt/auto/root
+          path: ./
+        - run: s nas upload -r -n ./.s/build/artifacts/puppeteer-test/html2png/node_modules  /mnt/auto/node_modules
+          path: ./
     props: #  组件的属性值
       region: cn-hangzhou
       service:

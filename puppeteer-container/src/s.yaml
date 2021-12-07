@@ -15,9 +15,10 @@ vars:
 services:
   fc-puppeteer-customContainer-html2png:
     component: fc
-    pre-deploy:
-      - run: s build --use-docker --dockerfile ./src/Dockerfile
-        path: ./
+    actions:
+      pre-deploy:
+        - run: s build --use-docker --dockerfile ./src/Dockerfile
+          path: ./
     props:
       region: ${vars.region}
       service:
