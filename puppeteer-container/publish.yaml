@@ -1,6 +1,6 @@
 Type: Application
 Name: puppeteer-container
-Version: 1.0.6
+Version: 1.0.7
 Provider:
   - 阿里云
 Description: 该项目模板是一个基于 puppeteer 的截图 Web 应用
