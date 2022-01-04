@@ -22,9 +22,9 @@ services:
         - run: s build --use-docker
           path: ./
       post-deploy:
-        - run: s nas upload -r -n ./.s/build/artifacts/puppeteer-test/html2png/.s/root /mnt/auto/root
+        - run: s nas upload -r ./.s/build/artifacts/puppeteer-test/html2png/.s/root /mnt/auto/root
           path: ./
-        - run: s nas upload -r -n ./.s/build/artifacts/puppeteer-test/html2png/node_modules  /mnt/auto/node_modules
+        - run: s nas upload -r ./.s/build/artifacts/puppeteer-test/html2png/node_modules  /mnt/auto/node_modules
           path: ./
     props: #  组件的属性值
       region: cn-hangzhou
