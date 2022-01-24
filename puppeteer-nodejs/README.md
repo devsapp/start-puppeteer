@@ -13,8 +13,8 @@
 部署成功, 还需要记得将依赖项上传到 NAS:
 
 ```bash
-s nas upload -r -n ./.s/build/artifacts/puppeteer-test/html2png/.s/root /mnt/auto/root
-s nas upload -r -n ./.s/build/artifacts/puppeteer-test/html2png/node_modules  /mnt/auto/node_modules
+s nas upload -r./.s/build/artifacts/puppeteer-test/html2png/.s/root /mnt/auto/root
+s nas upload -r ./.s/build/artifacts/puppeteer-test/html2png/node_modules  /mnt/auto/node_modules
 ```
 
 > puppeteer 安装包很大, 同时依赖一些 apt-get 包, 打包到代码很大，在这里， 将 apt-get 的安装包和 nodejs 的包 node_modules 上传到 NAS, 这个时候代码包大大瘦身， 同时 s deploy 能自动设置如下环境，使得函数能正常访问 puppeteer
