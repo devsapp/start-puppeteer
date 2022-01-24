@@ -13,13 +13,6 @@
 - 进入项目：`cd puppeteer-nodejs`
 - 部署项目：`s deploy`
 
-部署成功, 还需要记得将依赖项上传到 NAS:
-
-```bash
-s nas upload -r ./.s/build/artifacts/puppeteer-test/html2png/.s/root /mnt/auto/root
-s nas upload -r ./.s/build/artifacts/puppeteer-test/html2png/node_modules  /mnt/auto/node_modules
-```
-
 > 上述过程已经默认集成到了Yaml的action中，所以可以忽略
 
 详细文档可以参考[puppeteer-nodejs案例文档](./puppeteer-nodejs/src)
