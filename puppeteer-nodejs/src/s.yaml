@@ -27,12 +27,12 @@ services:
         - run: s nas upload -r ./.s/build/artifacts/puppeteer-test/html2png/node_modules  /mnt/auto
           path: ./
     props: #  组件的属性值
-      region: cn-hangzhou
+      region: "{{ region }}"
       service:
-        name: puppeteer-test
+        name: "{{ serviceName }}"
         nasConfig: Auto
       function:
-        name: html2png
+        name: "{{ functionName }}"
         handler: index.handler
         timeout: 120
         memorySize: 1536
