@@ -22,6 +22,8 @@ services:
         - run: s build --use-docker
           path: ./
       post-deploy:
+        - run: s nas init
+          path: ./
         - run: s nas upload -r ./.s/build/artifacts/puppeteer-test/html2png/.s/root /mnt/auto
           path: ./
         - run: s nas upload -r ./.s/build/artifacts/puppeteer-test/html2png/node_modules  /mnt/auto
