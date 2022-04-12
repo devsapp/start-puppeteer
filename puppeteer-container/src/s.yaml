@@ -15,19 +15,18 @@ access: "{{ access }}"
 vars:
   region: cn-hangzhou
 services:
-  fc-puppeteer-customContainer-html2png:
+  fc-puppeteer:
     component: fc
     actions:
       pre-deploy:
-        - run: s build --use-docker --dockerfile ./src/Dockerfile
-          path: ./
+        - component: fc build --use-docker --dockerfile ./code/Dockerfile
     props:
       region: ${vars.region}
       service:
-        name: puppeteer-customContainer
+        name: puppeteer
         internetAccess: true
       function:
-        name: html2png-customContainer
+        name: html2png
         description: HTTP function powered by nodejs express
         handler: not-used
         timeout: 60
@@ -35,10 +34,10 @@ services:
         memorySize: 1536
         runtime: custom-container
         customContainerConfig:
-          image: registry.cn-hangzhou.aliyuncs.com/${your_namespace}/${your_repo}:${version}
-        codeUri: ./src/
+          image: "{{ acrRegistry }}"
+        codeUri: ./code
       triggers:
-        - name: http-trigger-test
+        - name: http-t
           type: http
           config:
             authType: anonymous
