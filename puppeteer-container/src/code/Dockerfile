@@ -1,9 +1,4 @@
-FROM buildkite/puppeteer
-
-RUN apt-get update && apt-get install -y \
-  fonts-wqy-zenhei \
-  fonts-wqy-microhei \
-  --no-install-recommends && rm -r /var/lib/apt/lists/*
+FROM rsonghuster/puppeteer
 
 # Create app directory
 WORKDIR /usr/src/app
