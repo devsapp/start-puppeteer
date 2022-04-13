@@ -38,7 +38,12 @@
 
 ![](https://img.alicdn.com/imgextra/i3/O1CN01zHn7rA26A0ie5k2NY_!!6000000007620-2-tps-945-123.png)
 
-函数调用成功后，默认返回百度首页网页截图，如果想截图对指定 url 截图， 只需要在域名后面加上 query，比如 `url=https://www.taobao.com` 就实现对淘宝首页截图
+函数调用成功后，默认返回百度首页网页截图:
+
+
+![图片alt](https://img.alicdn.com/imgextra/i4/O1CN01TshrnO1VMFYl6nzyJ_!!6000000002638-2-tps-1539-892.png)
+
+如果想截图对指定 url 截图， 只需要在域名后面加上 query，比如 `url=https://www.taobao.com` 就实现对淘宝首页截图
 
 通过 Serverless Devs 开发者工具，您只需要几步，就可以体验 Serverless 架构带来的降本提效的技术红利。
 
