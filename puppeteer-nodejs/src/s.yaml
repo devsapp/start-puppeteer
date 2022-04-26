@@ -21,18 +21,10 @@ services:
       pre-deploy:
         - run: s build --use-docker
           path: ./
-      post-deploy:
-        - run: s nas init
-          path: ./
-        - run: s nas upload -r ./.s/build/artifacts/puppeteer-test/html2png/.s/root /mnt/auto
-          path: ./
-        - run: s nas upload -r ./.s/build/artifacts/puppeteer-test/html2png/node_modules  /mnt/auto
-          path: ./
     props: #  组件的属性值
       region: "{{ region }}"
       service:
         name: "{{ serviceName }}"
-        nasConfig: Auto
       function:
         name: "{{ functionName }}"
         handler: index.handler
@@ -40,10 +32,6 @@ services:
         memorySize: 1536
         runtime: nodejs12
         codeUri: ./code/
-        environmentVariables:
-          LD_LIBRARY_PATH: >-
-            /mnt/auto/root/usr/local/lib:/mnt/auto/root/usr/lib:/mnt/auto/root/usr/lib/x86_64-linux-gnu:/mnt/auto/root/usr/lib64:/mnt/auto/root/lib:/mnt/auto/root/lib/x86_64-linux-gnu:/mnt/auto/root/python/lib/python2.7/site-packages:/mnt/auto/root/python/lib/python3.6/site-packages
-          NODE_PATH: /mnt/auto/node_modules:/usr/local/lib/node_modules
       triggers:
         - name: httpTrigger
           type: http
