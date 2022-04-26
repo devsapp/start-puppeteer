@@ -19,8 +19,7 @@ services:
     component: fc
     actions:
       pre-deploy:
-        - run: s build --use-docker
-          path: ./
+        - component: fc build --use-docker
     props: #  组件的属性值
       region: "{{ region }}"
       service:
