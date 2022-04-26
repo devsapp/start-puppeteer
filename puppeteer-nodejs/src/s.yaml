@@ -31,7 +31,7 @@ services:
         timeout: 120
         memorySize: 1536
         runtime: nodejs12
-        codeUri: ./code/
+        codeUri: ./code
       triggers:
         - name: httpTrigger
           type: http
