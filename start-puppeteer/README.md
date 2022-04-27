@@ -13,7 +13,7 @@
 
 ## 体验前准备
 
-该应用案例，需要您开通[阿里云函数计算](https://fcnext.console.aliyun.com/) 产品；并建议您当前的账号有一下权限存在`FCDefaultRole`。
+该应用案例，需要您开通[阿里云函数计算](https://fcnext.console.aliyun.com/) 产品；并建议您当前的账号存在以下权限[AliyunFCDefaultRole](https://help.aliyun.com/document_detail/181589.html)。
 
 ## 代码与预览
 
@@ -39,7 +39,7 @@
 
 ## 项目使用注意事项
 
-项目Yaml中，声明了`actions`， puppeteer 安装包很大, 同时依赖一些 apt-get 包, s build 将相关的底层 lib 和 npm 包统一打包到代码包， 并自动设置好相应的环境变量 LD_LIBRARY_PATH 和 NODE_PATH
+项目Yaml中，声明了`actions`， puppeteer 安装包很大, 同时依赖一些底层 lib, s deploy 将相关的底层 lib 和 npm 包统一打包到代码包， 并自动设置好相应的环境变量 LD_LIBRARY_PATH 和 NODE_PATH
 
 ## 应用详情
 
@@ -65,9 +65,9 @@ Puppeteer 是一个 Node 库，它提供了高级的 API 并通过 DevTools 协�
 
 ![图片alt](https://img.alicdn.com/imgextra/i3/O1CN01zHn7rA26A0ie5k2NY_!!6000000007620-2-tps-945-123.png)
 
-此时，打开url, 就可以得到百度首页的截图：
+此时，打开url, 就可以得到 Serverless Devs 官网首页的截图:
 
-![图片alt](https://img.alicdn.com/imgextra/i4/O1CN01TshrnO1VMFYl6nzyJ_!!6000000002638-2-tps-1539-892.png)
+![图片alt](https://img.alicdn.com/imgextra/i1/O1CN01GHxCC11evMTjo8v15_!!6000000003933-2-tps-1200-5998.png)
 
 -----
 
