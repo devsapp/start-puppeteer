@@ -67,7 +67,7 @@ Puppeteer 是一个 Node 库，它提供了高级的 API 并通过 DevTools 协�
 
 此时，打开url, 就可以得到 Serverless Devs 官网首页的截图:
 
-![图片alt](https://img.alicdn.com/imgextra/i1/O1CN01GHxCC11evMTjo8v15_!!6000000003933-2-tps-1200-5998.png)
+![图片alt](https://img.alicdn.com/imgextra/i2/O1CN01DK9mJH1wxLHCDXO5e_!!6000000006374-0-tps-1200-5998.jpg)
 
 -----
 
