@@ -1,43 +1,56 @@
-# Puppeteer App
+# start-puppeteer 帮助文档
 
-> 快速部署和体验Serverless架构下的Puppeteer应用
+<p align="center" class="flex justify-center">
+    <a href="https://www.serverless-devs.com" class="ml-1">
+    <img src="http://editor.devsapp.cn/icon?package=start-puppeteer&type=packageType">
+  </a>
+  <a href="http://www.devsapp.cn/details.html?name=start-puppeteer" class="ml-1">
+    <img src="http://editor.devsapp.cn/icon?package=start-puppeteer&type=packageVersion">
+  </a>
+  <a href="http://www.devsapp.cn/details.html?name=start-puppeteer" class="ml-1">
+    <img src="http://editor.devsapp.cn/icon?package=start-puppeteer&type=packageDownload">
+  </a>
+</p>
 
-- [Puppeteer App](#puppeteer-app)
-  - [体验前准备](#体验前准备)
-  - [代码与预览](#代码与预览)
-  - [快速部署和体验](#快速部署和体验)
-    - [🚀 一键部署](#-一键部署)
-    - [在本地部署体验](#在本地部署体验)
-  - [项目使用注意事项](#项目使用注意事项)
-  - [应用详情](#应用详情)
+<description>
 
-## 体验前准备
+> ***该项目模板是一个基于 puppeteer 的截图 Web 应用***
 
-该应用案例，需要您开通[阿里云函数计算](https://fcnext.console.aliyun.com/) 产品；并建议您当前的账号存在以下权限[AliyunFCDefaultRole](https://help.aliyun.com/document_detail/181589.html)。
+</description>
 
-## 代码与预览
+<table>
 
-- [:octocat: 源代码](https://github.com/devsapp/start-puppeteer/tree/master/start-puppeteer/src)
-- [:earth_africa: 效果预览](https://img.alicdn.com/imgextra/i4/O1CN01SIbofO1QhFdtCN6IB_!!6000000002007-2-tps-3316-1890.png)
 
-## 快速部署和体验
-### 🚀 一键部署
-您可以点击 点击`一键部署`按钮,进行快速体验
 
-[![Deploy with Severless Devs](https://img.alicdn.com/imgextra/i1/O1CN01w5RFbX1v45s8TIXPz_!!6000000006118-55-tps-95-28.svg)](https://fcnext.console.aliyun.com/applications/create?template=start-puppeteer)
+</table>
 
-### 在本地部署体验
+<codepre id="codepre">
 
-1. 下载安装 Serverless Devs：`npm install @serverless-devs/s` 
-    > 详细文档可以参考 [Serverless Devs 安装文档](https://github.com/Serverless-Devs/Serverless-Devs/blob/master/docs/zh/install.md)
-2. 配置密钥信息：`s config add`
-    > 详细文档可以参考 [阿里云密钥配置文档](https://github.com/devsapp/fc/blob/main/docs/zh/config.md)
-3. 初始化项目：`s init start-puppeteer -d start-puppeteer`
-4. 进入项目并部署：`cd start-puppeteer && s deploy`
+</codepre>
 
-> 在本地使用该项目时，不仅可以部署，还可以进行更多的操作，例如查看日志，查看指标，进行多种模式的调试等，这些操作详情可以参考[函数计算组件命令文档](https://github.com/devsapp/fc#%E6%96%87%E6%A1%A3%E7%9B%B8%E5%85%B3) ;
+<deploy>
 
-## 项目使用注意事项
+## 部署 & 体验
+
+<appcenter>
+
+-  :fire:  通过 [Serverless 应用中心](https://fcnext.console.aliyun.com/applications/create?template=start-puppeteer) ，
+[![Deploy with Severless Devs](https://img.alicdn.com/imgextra/i1/O1CN01w5RFbX1v45s8TIXPz_!!6000000006118-55-tps-95-28.svg)](https://fcnext.console.aliyun.com/applications/create?template=start-puppeteer)  该应用。 
+
+</appcenter>
+
+- 通过 [Serverless Devs Cli](https://www.serverless-devs.com/serverless-devs/install) 进行部署：
+    - [安装 Serverless Devs Cli 开发者工具](https://www.serverless-devs.com/serverless-devs/install) ，并进行[授权信息配置](https://www.serverless-devs.com/fc/config) ；
+    - 初始化项目：`s init start-puppeteer -d start-puppeteer`   
+    - 进入项目，并进行项目部署：`cd start-puppeteer && s deploy -y`
+
+</deploy>
+
+<appdetail id="flushContent">
+
+# 应用详情
+
+## 注意事项
 
 项目Yaml中，声明了`actions`， puppeteer 安装包很大, 同时依赖一些底层 lib, s deploy 将相关的底层 lib 和 npm 包统一打包到代码包， 并自动设置好相应的环境变量 LD_LIBRARY_PATH 和 NODE_PATH
 
@@ -69,8 +82,21 @@ Puppeteer 是一个 Node 库，它提供了高级的 API 并通过 DevTools 协�
 
 ![图片alt](https://img.alicdn.com/imgextra/i2/O1CN01DK9mJH1wxLHCDXO5e_!!6000000006374-0-tps-1200-5998.jpg)
 
------
 
-> - Serverless Devs 项目：https://www.github.com/serverless-devs/serverless-devs   
-> - Serverless Devs 文档：https://www.github.com/serverless-devs/docs   
-> - Serverless Devs 钉钉交流群：33947367    
+</appdetail>
+
+<devgroup>
+
+## 开发者社区
+
+您如果有关于错误的反馈或者未来的期待，您可以在 [Serverless Devs repo Issues](https://github.com/serverless-devs/serverless-devs/issues) 中进行反馈和交流。如果您想要加入我们的讨论组或者了解 FC 组件的最新动态，您可以通过以下渠道进行：
+
+<p align="center">
+
+| <img src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1635407298906_20211028074819117230.png" width="130px" > | <img src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1635407044136_20211028074404326599.png" width="130px" > | <img src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1635407252200_20211028074732517533.png" width="130px" > |
+|--- | --- | --- |
+| <center>微信公众号：`serverless`</center> | <center>微信小助手：`xiaojiangwh`</center> | <center>钉钉交流群：`33947367`</center> | 
+
+</p>
+
+</devgroup>
