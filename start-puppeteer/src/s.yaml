@@ -47,7 +47,7 @@ services:
         handler: index.handler
         timeout: 120
         memorySize: 1536
-        runtime: nodejs12
+        runtime: nodejs14
         codeUri: ./code
       triggers:
         - name: httpTrigger
