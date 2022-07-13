@@ -57,8 +57,6 @@ services:
         memorySize: 1536
         runtime: nodejs14
         codeUri: ./code
-        environmentVariables:
-          LD_LIBRARY_PATH: /opt/lib:/code:/code/lib:/usr/local/lib
       triggers:
         - name: httpTrigger
           type: http
