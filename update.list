@@ -1,1 +1,3 @@
 ./start-puppeteer
+./puppeteer-nodejs
+./puppeteer-container
