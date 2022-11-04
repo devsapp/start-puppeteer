@@ -44,6 +44,8 @@
     - 初始化项目：`s init puppeteer-nodejs -d puppeteer-nodejs`   
     - 进入项目，并进行项目部署：`cd puppeteer-nodejs && s deploy -y`
 
+> Tips：如果您不想 build 执行 apt-get 安装底层 so lib, 可以直接去掉 apt-get.list 文件，直接使用 `acs:fc:cn-shenzhen:1940309364339785:layers/PuppeteerLib/versions/1` 这个 public layer 即可
+
 </deploy>
 
 <appdetail id="flushContent">
