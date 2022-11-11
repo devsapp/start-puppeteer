@@ -1,6 +1,6 @@
 Type: Application
 Name: start-puppeteer
-Version: 1.0.13
+Version: 1.0.14
 Provider:
   - 阿里云
 Description: 基于 Nodejs 运行时的 puppeteer 的截图 Web 应用
