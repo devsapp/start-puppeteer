@@ -39,7 +39,7 @@ services:
         runtime: nodejs14
         codeUri: ./code
         layers:
-          - d3fc5de8d120687be2bfab761518d5de#Nodejs-Puppeteer17x#1
+          - acs:fc:cn-hangzhou:official:layers/Nodejs-Puppeteer17x/versions/1
         environmentVariables:
           LD_LIBRARY_PATH: /opt/lib/x86_64-linux-gnu:/opt/lib
           NODE_PATH: /opt/node_modules:/opt/nodejs/node_modules
