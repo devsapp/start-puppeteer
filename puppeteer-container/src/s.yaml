@@ -49,7 +49,7 @@ services:
         description: HTTP function powered by nodejs express
         handler: not-used
         timeout: 60
-        caPort: 8080
+        caPort: 9000
         memorySize: 1536
         runtime: custom-container
         customContainerConfig:
