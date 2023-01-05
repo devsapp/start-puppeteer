@@ -6,7 +6,7 @@ const fs = require('fs');
 const puppeteer = require('puppeteer');
 
 // Constants
-const PORT = 8080;
+const PORT = 9000;
 const HOST = '0.0.0.0';
 
 // HTTP function invocation
