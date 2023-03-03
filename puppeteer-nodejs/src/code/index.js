@@ -14,7 +14,9 @@ module.exports.handler = function (request, response, context) {
 
     let url = request.queries['url'];
 
-    if (!url) {
+    if (url) {
+      url = decodeURIComponent(url);
+    else {
       url = 'https://www.baidu.com';
     }
 
