@@ -21,6 +21,10 @@ name: puppeteer-app        # 项目名称
 # 密钥使用顺序可以参考：https://www.serverless-devs.com/serverless-devs/tool#密钥使用顺序与规范
 access: "{{ access }}"     #  秘钥别名
 
+
+vars: 
+  region: "{{ region }}"
+
 services:
   puppeteer: # 业务名称/模块名称
     # 如果只想针对 async-task 下面的业务进行相关操作，可以在命令行中加上 async-task，例如：
@@ -28,7 +32,7 @@ services:
     # 如果不带有 async-task ，而是直接执行 s build，工具则会对当前Yaml下，所有和 helloworld 平级的业务模块（如有其他平级的模块，例如下面注释的next-function），按照一定顺序进行 build 操作
     component: fc # 组件名称，Serverless Devs 工具本身类似于一种游戏机，不具备具体的业务能力，组件类似于游戏卡，用户通过向游戏机中插入不同的游戏卡实现不同的功能，即通过使用不同的组件实现不同的具体业务能力
     props: #  组件的属性值
-      region: "{{ region }}"
+      region: ${vars.region}
       service:
         name: "{{ serviceName }}"
       function:
@@ -39,7 +43,7 @@ services:
         runtime: nodejs14
         codeUri: ./code
         layers:
-          - d3fc5de8d120687be2bfab761518d5de#Nodejs-Puppeteer17x#1
+          - acs:fc:${vars.region}:official:layers/Nodejs-Puppeteer17x/versions/3
         environmentVariables:
           LD_LIBRARY_PATH: /opt/lib/x86_64-linux-gnu:/opt/lib
           NODE_PATH: /opt/node_modules:/opt/nodejs/node_modules
