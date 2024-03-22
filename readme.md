@@ -1,4 +1,6 @@
-# Puppeteer项目在阿里云函数计算的实践
+# Puppeteer项目在阿里云函数计算2.0的实践
+
+**注意：** 如果您使用函数计算 3.0， 请直接移步到 [start-puppeteer-v3](https://github.com/devsapp/start-puppeteer-v3)
 
 本仓库提供了两个应用案例，分别是通过函数计算Node.js运行时部署Puppeteer项目，以及通过Container形式将Puppeteer项目部署到阿里云函数计算：
 
